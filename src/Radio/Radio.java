@@ -1,0 +1,14 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Radio;
+
+/**
+ *
+ * @author Ana Lucía Hernández (17138). Mario Sarmientos (17055)
+ **/
+public class Radio {
+    
+}
