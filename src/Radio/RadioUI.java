@@ -7,7 +7,7 @@ package Radio;
 
 /**
  *
- * @author anahernandez
+ * @author Ana Lucía Hernández (17138). Mario Sarmientos (17055)
  */
 public class RadioUI extends javax.swing.JFrame {
 
