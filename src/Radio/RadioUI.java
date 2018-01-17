@@ -40,6 +40,13 @@ public class RadioUI extends javax.swing.JFrame {
         botonFM = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         botonOnOff = new javax.swing.JToggleButton();
+        emisora7 = new javax.swing.JButton();
+        emisora8 = new javax.swing.JButton();
+        emisora9 = new javax.swing.JButton();
+        emisora10 = new javax.swing.JButton();
+        emisora11 = new javax.swing.JButton();
+        emisora12 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -76,26 +83,26 @@ public class RadioUI extends javax.swing.JFrame {
             }
         });
 
+        emisora7.setText("7");
+
+        emisora8.setText("8");
+
+        emisora9.setText("9");
+
+        emisora10.setText("10");
+
+        emisora11.setText("11");
+
+        emisora12.setText("12");
+
+        jLabel2.setText("AM");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(63, 63, 63)
-                .addComponent(emisora1)
-                .addGap(18, 18, 18)
-                .addComponent(emisora2)
-                .addGap(18, 18, 18)
-                .addComponent(emisora3)
-                .addGap(18, 18, 18)
-                .addComponent(emisora4)
-                .addGap(18, 18, 18)
-                .addComponent(emisora5)
-                .addGap(18, 18, 18)
-                .addComponent(emisora6)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(528, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(estacionAnterior1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(estacionSiguiente, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -104,12 +111,42 @@ public class RadioUI extends javax.swing.JFrame {
                 .addGap(31, 31, 31)
                 .addComponent(botonOnOff)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(63, 63, 63)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 393, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2)
+                .addGap(37, 37, 37)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(botonFM)
                     .addComponent(botonAM))
                 .addGap(46, 46, 46))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(63, 63, 63)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(emisora7)
+                        .addGap(18, 18, 18)
+                        .addComponent(emisora8)
+                        .addGap(18, 18, 18)
+                        .addComponent(emisora9)
+                        .addGap(18, 18, 18)
+                        .addComponent(emisora10)
+                        .addGap(18, 18, 18)
+                        .addComponent(emisora11)
+                        .addGap(18, 18, 18)
+                        .addComponent(emisora12))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(emisora1)
+                        .addGap(18, 18, 18)
+                        .addComponent(emisora2)
+                        .addGap(18, 18, 18)
+                        .addComponent(emisora3)
+                        .addGap(18, 18, 18)
+                        .addComponent(emisora4)
+                        .addGap(18, 18, 18)
+                        .addComponent(emisora5)
+                        .addGap(18, 18, 18)
+                        .addComponent(emisora6)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -125,7 +162,10 @@ public class RadioUI extends javax.swing.JFrame {
                         .addComponent(botonAM)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(botonFM)
-                        .addGap(18, 18, 18)))
+                        .addGap(18, 18, 18))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(13, 13, 13)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(estacionSiguiente)
                     .addComponent(estacionAnterior1))
@@ -137,7 +177,15 @@ public class RadioUI extends javax.swing.JFrame {
                     .addComponent(emisora4)
                     .addComponent(emisora5)
                     .addComponent(emisora6))
-                .addGap(36, 36, 36))
+                .addGap(1, 1, 1)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(emisora7)
+                    .addComponent(emisora8)
+                    .addComponent(emisora9)
+                    .addComponent(emisora10)
+                    .addComponent(emisora11)
+                    .addComponent(emisora12))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -153,7 +201,7 @@ public class RadioUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         pack();
@@ -203,14 +251,21 @@ public class RadioUI extends javax.swing.JFrame {
     private javax.swing.JButton botonFM;
     private javax.swing.JToggleButton botonOnOff;
     private javax.swing.JButton emisora1;
+    private javax.swing.JButton emisora10;
+    private javax.swing.JButton emisora11;
+    private javax.swing.JButton emisora12;
     private javax.swing.JButton emisora2;
     private javax.swing.JButton emisora3;
     private javax.swing.JButton emisora4;
     private javax.swing.JButton emisora5;
     private javax.swing.JButton emisora6;
+    private javax.swing.JButton emisora7;
+    private javax.swing.JButton emisora8;
+    private javax.swing.JButton emisora9;
     private javax.swing.JButton estacionAnterior1;
     private javax.swing.JButton estacionSiguiente;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
