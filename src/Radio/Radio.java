@@ -113,7 +113,7 @@ public class Radio implements douglas {
     }
     /**
      * Metodo para guardar una estacion como favorita en alguno de los botones
-     * @param e: estacion actual - la uqe se quiere guardar
+     * @param e: estacion actual - la que se quiere guardar
      * @param b: boton en el cual se desea guardar la estacion
      */
     public void guardar(float e, int b) //en el GUI, b tiene que ser el numero que da el usuario -1
