@@ -52,8 +52,10 @@ public class Radio implements douglas {
      * Metodo que se utilizara para cambiar radio AM a FM y viceversa
      * 
      */
-    public void Switch()
+    public float Switch()
     {
+        float emisora = (float) 0.0;
+        return emisora;
        
     }
     /**
