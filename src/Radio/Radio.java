@@ -20,6 +20,8 @@ public class Radio implements douglas {
     
     public Radio()
     {
+        AM = new int[108];
+        FM = new float[100];
         int emisorasAM = 530;
         for (int i =0; i<108; i++)
         {
