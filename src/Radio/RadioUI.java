@@ -299,17 +299,37 @@ public class RadioUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonOnOffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonOnOffActionPerformed
+        
         if (botonOnOff.isSelected())
         {
             botonOnOff.setText("OFF");
             botonOnOff.setForeground(Color.red);
-            jPanel1.setEnabled(false);
+            botonGuardar.setEnabled(false);
+            botonAM.setEnabled(false);
+            botonFM.setEnabled(false);
+            emisora1.setEnabled(false);
+            emisora2.setEnabled(false);
+            emisora3.setEnabled(false);
+            emisora4.setEnabled(false);
+            emisora5.setEnabled(false);
+            emisora6.setEnabled(false);
+            estacionSiguiente.setEnabled(false);
+            estacionAnterior1.setEnabled(false);
         }
         else
         {
             botonOnOff.setText("ON");
             botonOnOff.setForeground(Color.green);
-            jPanel1.setEnabled(true);
+            botonAM.setEnabled(true);
+            botonFM.setEnabled(true);
+            emisora1.setEnabled(true);
+            emisora2.setEnabled(true);
+            emisora3.setEnabled(true);
+            emisora4.setEnabled(true);
+            emisora5.setEnabled(true);
+            emisora6.setEnabled(true);
+            estacionSiguiente.setEnabled(true);
+            estacionAnterior1.setEnabled(true);
         }
     }//GEN-LAST:event_botonOnOffActionPerformed
 
