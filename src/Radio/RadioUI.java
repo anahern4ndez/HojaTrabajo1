@@ -33,6 +33,11 @@ public class RadioUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        JDguardar = new javax.swing.JDialog();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        botonAGuardar = new javax.swing.JSpinner();
+        guardarEmisora = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         emisora1 = new javax.swing.JButton();
         emisora2 = new javax.swing.JButton();
@@ -46,26 +51,106 @@ public class RadioUI extends javax.swing.JFrame {
         botonFM = new javax.swing.JButton();
         labelEmisora = new javax.swing.JLabel();
         botonOnOff = new javax.swing.JToggleButton();
-        emisora7 = new javax.swing.JButton();
-        emisora8 = new javax.swing.JButton();
-        emisora9 = new javax.swing.JButton();
-        emisora10 = new javax.swing.JButton();
-        emisora11 = new javax.swing.JButton();
-        emisora12 = new javax.swing.JButton();
+        botonGuardar = new javax.swing.JButton();
+
+        jLabel1.setText("¿En qué boton desea guardar la emisora?");
+
+        botonAGuardar.setModel(new javax.swing.SpinnerListModel(new String[] {"1", "2", "3", "4", "5", "6"}));
+
+        guardarEmisora.setText("Guardar Emisora");
+        guardarEmisora.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                guardarEmisoraActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(guardarEmisora, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addGap(28, 28, 28)
+                .addComponent(botonAGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(79, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(botonAGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(guardarEmisora)
+                .addContainerGap(23, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout JDguardarLayout = new javax.swing.GroupLayout(JDguardar.getContentPane());
+        JDguardar.getContentPane().setLayout(JDguardarLayout);
+        JDguardarLayout.setHorizontalGroup(
+            JDguardarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JDguardarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        JDguardarLayout.setVerticalGroup(
+            JDguardarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(JDguardarLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204), 3));
+
         emisora1.setText("1");
+        emisora1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                emisora1ActionPerformed(evt);
+            }
+        });
 
         emisora2.setText("2");
+        emisora2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                emisora2ActionPerformed(evt);
+            }
+        });
 
         emisora3.setText("3");
+        emisora3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                emisora3ActionPerformed(evt);
+            }
+        });
 
         emisora4.setText("4");
+        emisora4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                emisora4ActionPerformed(evt);
+            }
+        });
 
         emisora5.setText("5");
+        emisora5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                emisora5ActionPerformed(evt);
+            }
+        });
 
         emisora6.setText("6");
+        emisora6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                emisora6ActionPerformed(evt);
+            }
+        });
 
         estacionSiguiente.setText(">");
         estacionSiguiente.addActionListener(new java.awt.event.ActionListener() {
@@ -108,88 +193,77 @@ public class RadioUI extends javax.swing.JFrame {
             }
         });
 
-        emisora7.setText("7");
-
-        emisora8.setText("8");
-
-        emisora9.setText("9");
-
-        emisora10.setText("10");
-
-        emisora11.setText("11");
-
-        emisora12.setText("12");
+        botonGuardar.setText("Guardar Emisora");
+        botonGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonGuardarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(546, Short.MAX_VALUE)
-                .addComponent(estacionAnterior1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(estacionSiguiente, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15))
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
                         .addComponent(botonOnOff)
-                        .addGap(42, 42, 42)
-                        .addComponent(labelEmisora, javax.swing.GroupLayout.PREFERRED_SIZE, 393, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(48, 48, 48)
+                        .addGap(42, 42, 42))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(botonGuardar)
+                        .addGap(18, 18, 18)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(labelEmisora, javax.swing.GroupLayout.PREFERRED_SIZE, 358, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(58, 58, 58)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(botonFM, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(botonAM, javax.swing.GroupLayout.Alignment.TRAILING)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(55, 55, 55)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(emisora7)
-                                .addGap(18, 18, 18)
-                                .addComponent(emisora8)
-                                .addGap(18, 18, 18)
-                                .addComponent(emisora9)
-                                .addGap(18, 18, 18)
-                                .addComponent(emisora10)
-                                .addGap(18, 18, 18)
-                                .addComponent(emisora11)
-                                .addGap(18, 18, 18)
-                                .addComponent(emisora12))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(emisora1)
-                                .addGap(18, 18, 18)
-                                .addComponent(emisora2)
-                                .addGap(18, 18, 18)
-                                .addComponent(emisora3)
-                                .addGap(18, 18, 18)
-                                .addComponent(emisora4)
-                                .addGap(18, 18, 18)
-                                .addComponent(emisora5)
-                                .addGap(18, 18, 18)
-                                .addComponent(emisora6)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(botonAM, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGap(384, 384, 384)
+                        .addComponent(estacionAnterior1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(estacionSiguiente, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(15, 15, 15))))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(89, 89, 89)
+                .addComponent(emisora1)
+                .addGap(24, 24, 24)
+                .addComponent(emisora2)
+                .addGap(27, 27, 27)
+                .addComponent(emisora3)
+                .addGap(26, 26, 26)
+                .addComponent(emisora4)
+                .addGap(24, 24, 24)
+                .addComponent(emisora5)
+                .addGap(26, 26, 26)
+                .addComponent(emisora6)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addContainerGap(48, Short.MAX_VALUE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(botonAM)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(botonFM)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
+                                .addGap(21, 21, 21)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(estacionSiguiente)
+                                    .addComponent(estacionAnterior1)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(35, 35, 35)
                                 .addComponent(botonOnOff)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)))
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(estacionSiguiente)
-                            .addComponent(estacionAnterior1))
-                        .addGap(25, 25, 25))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
+                                .addComponent(botonGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(30, 30, 30)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(48, 48, 48)
                         .addComponent(labelEmisora, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -201,32 +275,24 @@ public class RadioUI extends javax.swing.JFrame {
                     .addComponent(emisora4)
                     .addComponent(emisora5)
                     .addComponent(emisora6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(emisora7)
-                    .addComponent(emisora8)
-                    .addComponent(emisora9)
-                    .addComponent(emisora10)
-                    .addComponent(emisora11)
-                    .addComponent(emisora12))
-                .addGap(53, 53, 53))
+                .addGap(17, 17, 17))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(26, 26, 26)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(29, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(17, 17, 17)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(20, 20, 20))
         );
 
         pack();
@@ -292,6 +358,112 @@ public class RadioUI extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_estacionAnterior1ActionPerformed
 
+    private void botonGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonGuardarActionPerformed
+        JDguardar.pack();
+        JDguardar.setVisible(true);
+    }//GEN-LAST:event_botonGuardarActionPerformed
+
+    private void guardarEmisoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarEmisoraActionPerformed
+        radio.guardar(Float.parseFloat(labelEmisora.getText().substring(0, labelEmisora.getText().indexOf(" "))), (Integer.parseInt(botonAGuardar.getValue().toString())) -1);
+        JDguardar.setVisible(false);
+    }//GEN-LAST:event_guardarEmisoraActionPerformed
+
+    private void emisora1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emisora1ActionPerformed
+        String botonVacio = labelEmisora.getText();
+        if (botonAM.getBackground().equals(Color.DARK_GRAY))
+        {
+            labelEmisora.setText(String.valueOf(radio.seleccionarFav(0)) + "   AM");
+        }
+        if (botonFM.getBackground().equals(Color.DARK_GRAY))
+        {
+            labelEmisora.setText(String.valueOf(radio.seleccionarFav(0)) + "   FM");
+        }
+        if (radio.seleccionarFav(0) == 0.0)
+        {
+            labelEmisora.setText(botonVacio);
+        }
+    }//GEN-LAST:event_emisora1ActionPerformed
+
+    private void emisora2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emisora2ActionPerformed
+        String botonVacio = labelEmisora.getText();
+        if (botonAM.getBackground().equals(Color.DARK_GRAY))
+        {
+            labelEmisora.setText(String.valueOf(radio.seleccionarFav(1)) + "   AM");
+        }
+        if (botonFM.getBackground().equals(Color.DARK_GRAY))
+        {
+            labelEmisora.setText(String.valueOf(radio.seleccionarFav(1)) + "   FM");
+        }
+        if (radio.seleccionarFav(1) == 0.0)
+        {
+            labelEmisora.setText(botonVacio);
+        }
+    }//GEN-LAST:event_emisora2ActionPerformed
+
+    private void emisora3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emisora3ActionPerformed
+        String botonVacio = labelEmisora.getText();
+        if (botonAM.getBackground().equals(Color.DARK_GRAY))
+        {
+            labelEmisora.setText(String.valueOf(radio.seleccionarFav(2)) + "   AM");
+        }
+        if (botonFM.getBackground().equals(Color.DARK_GRAY))
+        {
+            labelEmisora.setText(String.valueOf(radio.seleccionarFav(2)) + "   FM");
+        }
+        if (radio.seleccionarFav(2) == 0.0)
+        {
+            labelEmisora.setText(botonVacio);
+        }
+    }//GEN-LAST:event_emisora3ActionPerformed
+
+    private void emisora4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emisora4ActionPerformed
+        String botonVacio = labelEmisora.getText();
+        if (botonAM.getBackground().equals(Color.DARK_GRAY))
+        {
+            labelEmisora.setText(String.valueOf(radio.seleccionarFav(3)) + "   AM");
+        }
+        if (botonFM.getBackground().equals(Color.DARK_GRAY))
+        {
+            labelEmisora.setText(String.valueOf(radio.seleccionarFav(3)) + "   FM");
+        }
+        if (radio.seleccionarFav(3) == 0.0)
+        {
+            labelEmisora.setText(botonVacio);
+        }
+    }//GEN-LAST:event_emisora4ActionPerformed
+
+    private void emisora5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emisora5ActionPerformed
+        String botonVacio = labelEmisora.getText();
+        if (botonAM.getBackground().equals(Color.DARK_GRAY))
+        {
+            labelEmisora.setText(String.valueOf(radio.seleccionarFav(4)) + "   AM");
+        }
+        if (botonFM.getBackground().equals(Color.DARK_GRAY))
+        {
+            labelEmisora.setText(String.valueOf(radio.seleccionarFav(4)) + "   FM");
+        }
+        if (radio.seleccionarFav(4) == 0.0)
+        {
+            labelEmisora.setText(botonVacio);
+        }
+    }//GEN-LAST:event_emisora5ActionPerformed
+
+    private void emisora6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emisora6ActionPerformed
+        String botonVacio = labelEmisora.getText();
+        if (botonAM.getBackground().equals(Color.DARK_GRAY))
+        {
+            labelEmisora.setText(String.valueOf(radio.seleccionarFav(5)) + "   AM");
+        }
+        if (botonFM.getBackground().equals(Color.DARK_GRAY))
+        {
+            labelEmisora.setText(String.valueOf(radio.seleccionarFav(5)) + "   FM");
+        }
+        if (radio.seleccionarFav(5) == 0.0)
+        {
+            labelEmisora.setText(botonVacio);
+        }
+    }//GEN-LAST:event_emisora6ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -328,24 +500,24 @@ public class RadioUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JDialog JDguardar;
+    private javax.swing.JSpinner botonAGuardar;
     private javax.swing.JButton botonAM;
     private javax.swing.JButton botonFM;
+    private javax.swing.JButton botonGuardar;
     private javax.swing.JToggleButton botonOnOff;
     private javax.swing.JButton emisora1;
-    private javax.swing.JButton emisora10;
-    private javax.swing.JButton emisora11;
-    private javax.swing.JButton emisora12;
     private javax.swing.JButton emisora2;
     private javax.swing.JButton emisora3;
     private javax.swing.JButton emisora4;
     private javax.swing.JButton emisora5;
     private javax.swing.JButton emisora6;
-    private javax.swing.JButton emisora7;
-    private javax.swing.JButton emisora8;
-    private javax.swing.JButton emisora9;
     private javax.swing.JButton estacionAnterior1;
     private javax.swing.JButton estacionSiguiente;
+    private javax.swing.JButton guardarEmisora;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel labelEmisora;
     // End of variables declaration//GEN-END:variables
 }

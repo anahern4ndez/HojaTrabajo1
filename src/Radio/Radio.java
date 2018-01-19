@@ -17,7 +17,8 @@ public class Radio implements douglas {
     private boolean estado;
     private int[] AM;
     private float[] FM;
-    private float[] botones;
+    private float[] botonesAM;
+    private float[] botonesFM;
     private boolean estadoAM;
     private boolean estadoFM;
     private float ultimaEstacionFM;
@@ -31,6 +32,8 @@ public class Radio implements douglas {
         estadoFM = false;
         AM = new int[109];
         FM = new float[101];
+        botonesAM = new float[6];
+        botonesFM = new float[6];
         int emisorasAM = 530;
         for (int i =0; i<109; i++)
         {
@@ -102,8 +105,7 @@ public class Radio implements douglas {
                 {   
                     if(i == 108)
                     {
-                        i=0;
-                        emisoraSiguiente = AM[i];
+                        emisoraSiguiente = (float) 530.0;
                         ultimaEstacionAM = emisoraSiguiente;
                     }
                     else 
@@ -122,8 +124,7 @@ public class Radio implements douglas {
                 {
                     if (i == 100)
                     {
-                        i=0;
-                        emisoraSiguiente = FM[i];
+                        emisoraSiguiente = (float)87.9;
                         ultimaEstacionFM = emisoraSiguiente;
                     }
                     else 
@@ -187,11 +188,18 @@ public class Radio implements douglas {
      */
     public void guardar(float e, int b) //en el GUI, b tiene que ser el numero que da el usuario -1
     {
-        for (int i=0; i<12; i++)
+        for (int i=0; i<6; i++)
         {
             if (i == b)
             {
-                botones[i] = e;
+                if (e>500)
+                {
+                    botonesAM[i] = e;
+                }
+                else
+                {
+                    botonesFM[i] = e;
+                }
             }
         }
     }
@@ -203,11 +211,18 @@ public class Radio implements douglas {
     public float seleccionarFav(int b)
     {
         float emisora = 0;
-        for (int i=0; i<12; i++)
+        for (int i=0; i<6; i++)
         {
             if (i == b)
             {
-                emisora = botones[i];
+                if (estadoAM == false)
+                {
+                    emisora = botonesAM[i];
+                }
+                else
+                {
+                    emisora = botonesFM[i];
+                }
             }
         }
         return emisora;
