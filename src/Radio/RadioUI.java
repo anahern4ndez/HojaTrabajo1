@@ -118,7 +118,7 @@ public class RadioUI extends javax.swing.JFrame {
 
         emisora11.setText("11");
 
-        emisora12.setText("6");
+        emisora12.setText("12");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
