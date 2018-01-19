@@ -211,7 +211,7 @@ public class Radio implements douglas {
     public float seleccionarFav(int b)
     {
         float emisora = 0;
-        for (int i=0; i<6; i++)
+        for (int i=0; i<12; i++)
         {
             if (i == b)
             {
