@@ -5,6 +5,9 @@
  */
 package Radio;
 
+import java.text.DecimalFormat;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Ana Lucía Hernández (17138). Mario Sarmientos (17055)
@@ -17,27 +20,36 @@ public class Radio implements douglas {
     private float[] botones;
     private boolean estadoAM;
     private boolean estadoFM;
+    private float ultimaEstacionFM;
+    private float ultimaEstacionAM;
     
     public Radio()
     {
-        AM = new int[108];
-        FM = new float[100];
+        this.ultimaEstacionFM = (float) 87.9;
+        ultimaEstacionAM = (float) 530.0;
+        estadoAM = true;
+        estadoFM = false;
+        AM = new int[109];
+        FM = new float[101];
         int emisorasAM = 530;
-        for (int i =0; i<108; i++)
+        for (int i =0; i<109; i++)
         {
             AM[i] = emisorasAM;
             emisorasAM += 10;
         }
         float emisorasFM = (float) 87.9;
-        for (int i =0; i < 100; i++)
+        for (int i =0; i < 101; i++)
         {
             FM[i] = emisorasFM;
-            emisorasFM += 10;
+            emisorasFM += 0.20;
+            DecimalFormat unDecimal = new DecimalFormat(".#");
+            emisorasFM = Float.parseFloat(unDecimal.format(emisorasFM));
         }
     }
     /** 
      * Metodo que enciende la radio si esta apagada, y la apaga si esta encendida. 
      */
+    @Override
     public void onOff()
     {
         if (this.estado == true)
@@ -52,64 +64,117 @@ public class Radio implements douglas {
     }
     /**
      * Metodo que se utilizara para cambiar radio AM a FM y viceversa
-     * 
+     * @return la ultima estacion de la emisora
      */
+    @Override
     public float Switch()
     {
-        float emisora = (float) 0.0;
-        return emisora;
-       
+       float ultimaEstacion = (float) 0.0;
+       if (this.estadoAM == true)
+       {
+            this.estadoAM = false; 
+            this.estadoFM = true;
+           ultimaEstacion = ultimaEstacionAM;
+            
+       }
+       else if (this.estadoFM == true)
+       {
+           this.estadoFM = false; 
+           this.estadoAM = true; 
+           ultimaEstacion = ultimaEstacionFM;
+       }
+       return ultimaEstacion;
     }
     /**
      * Metodo para cambiar a una estación anterior
      * @param a: Estación actual 
      * @return: la estacion siguiente en el array de estaciones
      */
+    @Override
     public float siguiente(float a)
     {
-        float emisoraSiguiente =0;
-        if (estadoAM == true)
+        float emisoraSiguiente = 0;
+        if (estadoAM == false)
         {
-            for (int i =0; i<108; i++)
-            {
-                if (AM[i] == Integer.parseInt(String.valueOf(a)))
-                {
-                    emisoraSiguiente = AM[i++];
+            for (int i =0; i<109; i++)
+            {	
+                if (AM[i] == Integer.parseInt(String.valueOf(a).substring(0, String.valueOf(a).indexOf("."))))
+                {   
+                    if(i == 108)
+                    {
+                        i=0;
+                        emisoraSiguiente = AM[i];
+                        ultimaEstacionAM = emisoraSiguiente;
+                    }
+                    else 
+                    {
+                        emisoraSiguiente = AM[i+1];
+                        ultimaEstacionAM = emisoraSiguiente;
+                    }
                 }
             }
         }
-        if (estadoAM == true)
+        if (estadoFM == false)
         {
-            for (int i =0; i < 100; i++)
+            for (int i =0; i < 101; i++)
             {
                 if (FM[i] == a)
                 {
-                    emisoraSiguiente = FM[i++];
+                    if (i == 100)
+                    {
+                        i=0;
+                        emisoraSiguiente = FM[i];
+                        ultimaEstacionFM = emisoraSiguiente;
+                    }
+                    else 
+                    {
+                        emisoraSiguiente = FM[i+1];
+                        ultimaEstacionFM = emisoraSiguiente;
+                    }
+                    
                 }
             }
         }
         return emisoraSiguiente;
     }
     public float anterior(float a)
-    {
+    { 
         float emisoraAnterior =0;
-        if (estadoAM == true)
+        if (estadoAM == false)
         {
-            for (int i =0; i<108; i++)
+            for (int i =0; i<109; i++)
             {
-                if (AM[i] == Integer.parseInt(String.valueOf(a)))
+                if (AM[i] == Integer.parseInt(String.valueOf(a).substring(0, String.valueOf(a).indexOf("."))))
                 {
-                    emisoraAnterior = AM[i--];
+                    if (i == 0){
+                        i=108;
+                        emisoraAnterior = AM[i];
+                        ultimaEstacionAM = emisoraAnterior;
+                    }
+                    else 
+                    {
+                        emisoraAnterior = AM[i-1];
+                        ultimaEstacionAM = emisoraAnterior;
+                    }
                 }
             }
         }
-        if (estadoAM == true)
+        if (estadoFM == false)
         {
-            for (int i =0; i < 100; i++)
+            for (int i =0; i < 101; i++)
             {
                 if (FM[i] == a)
                 {
-                    emisoraAnterior = FM[i--];
+                    if (i == 0){
+                        i = 100;
+                        emisoraAnterior = FM[i];
+                        ultimaEstacionFM = emisoraAnterior;
+                    }
+                    else 
+                    {
+                        emisoraAnterior = FM[i-1];
+                        ultimaEstacionFM = emisoraAnterior;
+                    }
                 }
             }
         }
