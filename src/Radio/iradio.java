@@ -9,7 +9,7 @@ package Radio;
  *
  * @author Ana Lucía Hernández (17138). Mario Sarmientos (17055)
  */
-public interface douglas {
+public interface iradio {
     /**
      * Metodo para encender y apagar la radio
      */

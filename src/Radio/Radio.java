@@ -12,7 +12,7 @@ import javax.swing.JOptionPane;
  *
  * @author Ana Lucía Hernández (17138). Mario Sarmientos (17055)
  **/
-public class Radio implements douglas {
+public class Radio implements iradio {
     
     private boolean estado;
     private int[] AM;

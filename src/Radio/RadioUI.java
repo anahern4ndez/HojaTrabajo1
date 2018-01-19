@@ -16,7 +16,7 @@ public class RadioUI extends javax.swing.JFrame {
     /**
      * Creates new form RadioUI
      */
-    douglas radio;
+    iradio radio;
     
     public RadioUI() {
         initComponents();
