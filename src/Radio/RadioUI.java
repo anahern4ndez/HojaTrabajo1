@@ -320,6 +320,7 @@ public class RadioUI extends javax.swing.JFrame {
         {
             botonOnOff.setText("ON");
             botonOnOff.setForeground(Color.green);
+            botonGuardar.setEnabled(true);
             botonAM.setEnabled(true);
             botonFM.setEnabled(true);
             emisora1.setEnabled(true);

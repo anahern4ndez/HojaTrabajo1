@@ -32,8 +32,8 @@ public class Radio implements douglas {
         estadoFM = false;
         AM = new int[109];
         FM = new float[101];
-        botonesAM = new float[6];
-        botonesFM = new float[6];
+        botonesAM = new float[12];
+        botonesFM = new float[12];
         int emisorasAM = 530;
         for (int i =0; i<109; i++)
         {
@@ -188,7 +188,7 @@ public class Radio implements douglas {
      */
     public void guardar(float e, int b) //en el GUI, b tiene que ser el numero que da el usuario -1
     {
-        for (int i=0; i<6; i++)
+        for (int i=0; i<12; i++)
         {
             if (i == b)
             {
