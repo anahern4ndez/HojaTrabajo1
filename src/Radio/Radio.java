@@ -45,6 +45,7 @@ public class Radio implements douglas {
         {
             FM[i] = emisorasFM;
             emisorasFM += 0.20;
+            //Cambio de formato a un solo decimal.
             DecimalFormat unDecimal = new DecimalFormat(".#");
             emisorasFM = Float.parseFloat(unDecimal.format(emisorasFM));
         }
